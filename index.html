@@ -1,0 +1,115 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plusboard</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar p-3 text-align=center">
+           <h2>PulseBoard</h2>
+            <div class="list-group mt-4">
+                <a href="#" class="list-group-item active">📊 Overview</a>
+                <a href="#" class="list-group-item">🖥️ Services</a>
+                <a href="#" class="list-group-item">⚠️ Alerts</a>
+                <a href="#" class="list-group-item">📄 Logs</a>
+                <a href="#" class="list-group-item">⚙️ Settings</a>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="col-md-10 p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2>Infrastructure Overview</h2>
+                    <p>live Dashboard</p>
+                </div>
+                <button class="btn btn-primary">Refresh</button>
+            </div>
+            <!-- Metric Cards -->
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <div class="card metric-card p-3">
+                        <h6>CPU LOAD</h6>
+                        <h2>72%</h2>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width:72%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card metric-card p-3">
+                        <h6>MEMORY</h6>
+                        <h2>58%</h2>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width:58%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card metric-card p-3">
+                        <h6>DISK I/O</h6>
+                        <h2>88%</h2>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width:88%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card metric-card p-3">
+                        <h6>NETWORK</h6>
+                        <h2>34%</h2>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width:34%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Services Table -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    Services
+                </div>
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Host</th>
+                        <th>Response</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>api-gateway</td>
+                        <td>web-01</td>
+                        <td>42 ms</td>
+                        <td><span class="status operational">Operational</span></td>
+                    </tr>
+                    <tr>
+                        <td>auth-service</td>
+                        <td>web-02</td>
+                        <td>61 ms</td>
+                        <td><span class="status operational">Operational</span></td>
+                    </tr>
+                    <tr>
+                        <td>payments</td>
+                        <td>pay-01</td>
+                        <td>310 ms</td>
+                        <td><span class="status degraded">Degraded</span></td>
+                    </tr>
+                    <tr>
+                        <td>db-primary</td>
+                        <td>db-01</td>
+                        <td>Timeout</td>
+                        <td><span class="status down">Down</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="bootstrap.min.css"></script>
+</body>
+</html>
